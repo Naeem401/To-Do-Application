@@ -15,6 +15,20 @@ span.textContent =taskText;
 const editBtn = document.createElement('button');
 editBtn.className = 'px-2 py-1 bg-yellow-400 text-white font-medium rounded-md hover:bg-yellow-500 transition';
 editBtn.textContent = 'Edit';
-editBtn.onclick = () => deleteTodoItem(li);
+editBtn.onclick = () => editTodoItem(span, editBtn);
 
-}
+//Delete Button
+const deleteBtn = document.createElement('button');
+deleteBtn.className = 'px-2 py-1 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition';
+deleteBtn.textContent = 'Delete';
+deleteBtn.onclick = () => deleteTodoItem(li)
+
+// Append elements to list item
+li.appendChild(span);
+li.appendChild(editBtn);
+li.appendChild(deleteBtn);
+
+return li;
+
+};
+
