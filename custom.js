@@ -32,3 +32,14 @@ return li;
 
 };
 
+// function to add a new to-do item
+ function addTodoItem() {
+    const tasktext = todoInput.ariaValueMax.trim();
+    if(tasktext === '') {
+        alert('Please enter a task!');
+        return
+    }
+    const todoItem = createTodoItem(tasktext);
+  toDoList.appendChild(todoItem);
+  todoInput.value = '';
+ }
