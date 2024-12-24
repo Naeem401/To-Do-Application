@@ -1,0 +1,28 @@
+
+.container {
+    position: relative;
+    border-radius: 0.5rem; 
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 50%, rgba(255, 0, 150, 1) 100%);
+    background-size: 200% 200%;
+    animation: borderAnimation 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
