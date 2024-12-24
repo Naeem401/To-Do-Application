@@ -43,3 +43,13 @@ return li;
   toDoList.appendChild(todoItem);
   todoInput.value = '';
  }
+
+ // Function to edit a to-do item
+ function editTodoItem(span, editBtn) {
+    if (editBtn.textContent === 'Edit') {
+        const newTask = prompt('Edit your task:', span.textContent);
+        if(newTask !== null && newTask.trim() !== '') {
+            span.textContent = newTask.trim();
+        }
+    }
+ }
