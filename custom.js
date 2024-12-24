@@ -53,3 +53,11 @@ return li;
         }
     }
  }
+
+ // Function to delete a To-Do item
+
+ function deleteTodoItem (li) {
+    li.remove();
+ }
+
+ 
